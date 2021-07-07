@@ -1,0 +1,173 @@
+@import "vars";
+
+@font-face {
+  font-family: 'Conv_Akrobat';
+  src: url('./assets/fonts/Akrobat/Akrobat-regular/fonts/Akrobat.eot');
+  src: local('☺'),
+  url('./assets/fonts/Akrobat/Akrobat-regular/fonts/Akrobat.woff') format('woff'),
+  url('./assets/fonts/Akrobat/Akrobat-regular/fonts/Akrobat.woff2') format('woff2'),
+  url('./assets/fonts/Akrobat/Akrobat-regular/fonts/Akrobat.ttf') format('truetype'),
+  url('./assets/fonts/Akrobat/Akrobat-regular/fonts/Akrobat.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Conv_PFDinTextPro-Regular';
+  src: url('./assets/fonts/PFDinTextPro/PFDinTextPro-Regular/fonts/PFDinTextPro-Regular.eot');
+  src: local('☺'),
+  url('./assets/fonts/PFDinTextPro/PFDinTextPro-Regular/fonts/PFDinTextPro-Regular.woff') format('woff'),
+  url('./assets/fonts/PFDinTextPro/PFDinTextPro-Regular/fonts/PFDinTextPro-Regular.woff2') format('woff2'),
+  url('./assets/fonts/PFDinTextPro/PFDinTextPro-Regular/fonts/PFDinTextPro-Regular.ttf') format('truetype'),
+  url('./assets/fonts/PFDinTextPro/PFDinTextPro-Regular/fonts/PFDinTextPro-Regular.svg') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PFDinTextPro-Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('PFDinTextPro-Light'),
+  url('./assets/fonts/PFDinTextPro/light/PFDinTextPro-Light.woff') format('woff'),
+  url('./assets/fonts/PFDinTextPro/light/PFDinTextPro-Light.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'PFDinTextPro-LightItalic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('PFDinTextPro-LightItalic'), url('./assets/fonts/PFDinTextPro/light/PFDinTextPro-LightItalic.woff') format('woff');
+}
+
+html {
+  background: #E5E5E5;
+  /*Сброс и общие стили*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul, nav {
+    list-style-type: none;
+  }
+
+  /*------------------------------*/
+  body {
+    background: #ffffff;
+    font-family: Conv_PFDinTextPro-Regular, Sans-Serif;
+
+    /*Шапка*/
+    header {
+      .beforeNav {
+        background: $maincolor;
+        padding: 2vh 12.81%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        font-size: 15px;
+        font-family: 'PFDinTextPro-Light';
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 1px;
+
+        a {
+          color: #fff;
+          position: relative;
+        }
+
+        & > div {
+          display: flex;
+          align-items: center;
+        }
+
+        .phoneWrapper {
+          #phoneIcon {
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-45%);
+          }
+        }
+
+        .searchInputWrapper {
+          width: 45%;
+
+          input {
+            background-image: url("./assets/images/searchIcon.svg");
+            background-repeat: no-repeat;
+            width: 100%;
+            padding: 0.7vh 15px;
+            font-size: 13px;
+            background-position-y: center;
+            background-position-x: 97%;
+            border: none;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+
+        .viewVariantsWrapper {
+          &:hover {
+            cursor: pointer;
+          }
+
+          #eyeIcon {
+            margin-right: 50px;
+          }
+
+          #changeLanguage::after {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-bottom: 1px solid #fff;
+            border-right: 1px solid #fff;
+            transform: rotate(45deg);
+            margin: 2px 10px;
+
+          }
+        }
+      }
+    }
+
+    /*-----------------------------*/
+
+    /*Главная часть*/
+    main {
+    }
+
+    /*-----------------------------*/
+
+    /*****Подвал**********/
+    footer {
+      padding: 19.5vh 12.81% 30vh 12.81%;
+      background-color: $maincolor;
+      /* background-image: url("./assets/images/pattern.png");*/
+      background-repeat: repeat-x;
+      background-position: bottom;
+
+
+      li a {
+        color: $footerNavItems;
+      }
+    }
+
+    /*-------------------------------*/
+  }
+}
+
+/*Импорты стилей для других страниц*/
+main.socialSphere{
+  @import "social-sphere";
+}
+

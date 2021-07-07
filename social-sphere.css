@@ -1,0 +1,38 @@
+.preview {
+  padding: 140px 12.81%;
+  background-color: #E5E5E5;
+  background-image: url("./assets/images/");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff; }
+  .preview .contentWrapper {
+    height: 41vh;
+    display: flex;
+    justify-content: space-between; }
+    .preview .contentWrapper .previewNav {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; }
+    .preview .contentWrapper .description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center; }
+      .preview .contentWrapper .description p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-family: 'PFDinTextPro-Light'; }
+      .preview .contentWrapper .description h2 {
+        font-family: 'Conv_Akrobat';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 72px;
+        letter-spacing: 0.025em; }
+    .preview .contentWrapper .showMore {
+      display: flex;
+      align-items: flex-end; }
+
+/*# sourceMappingURL=social-sphere.css.map */

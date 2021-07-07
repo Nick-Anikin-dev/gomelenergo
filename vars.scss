@@ -1,0 +1,59 @@
+$maincolor: #004673;
+$footerNavItems:  rgba(255, 255, 255, 0.6);
+
+@mixin preview($url) {
+  .preview {
+    padding: 140px 12.81%;
+    background-color: #E5E5E5;
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+
+    .contentWrapper {
+      height: 41vh;
+      display: flex;
+      justify-content: space-between;
+
+      .previewNav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+      }
+
+      .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        p {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          letter-spacing: 1px;
+          font-family: 'PFDinTextPro-Light';
+        }
+
+        h2 {
+          font-family: 'Conv_Akrobat';
+          font-style: normal;
+          font-weight: bold;
+          font-size: 60px;
+          line-height: 72px;
+          letter-spacing: 0.025em;
+        }
+      }
+
+      .showMore {
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+  }
+}
+
+
+
+
